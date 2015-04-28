@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="#">PM Rules!</a>
+  </div>
+  <div class="navbar-collapse collapse">
+    <ul class="nav navbar-nav">
+      <li ng-repeat="route in routes" data-ng-class="navClass('{{route.path}}')">
+        <a ng-href="#{{route.path}}" ng-bind="route.data.label"></a>
+      </li>
+    </ul>
+  </div>
+</div>

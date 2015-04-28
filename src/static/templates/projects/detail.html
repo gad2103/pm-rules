@@ -1,0 +1,132 @@
+<div class="row">
+  <div class="col-sm-12">
+    <h2>New sub project</h2>
+    <form>
+      <!-- Subproject and Owner-->
+      <div class="row">
+        <!-- Subproject -->
+        <div class="col-sm-6">
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">Sub Project</h3>
+            </div>
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-sm-12">
+                  <div class="form-group">
+                    <label>Name</label>
+                    <input class="form-control" ng-model="project.name">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-4">
+                  <div class="form-group">
+                    <label>Launch Date</label>
+                    <input class="form-control" ng-model="project.launch_date">
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="form-group">
+                    <label>Status</label>
+                    <input class="form-control" ng-model="project.status">
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="form-group">
+                    <label>Project Size</label>
+                    <input class="form-control" ng-model="project.project_size">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Owner -->
+        <div class="col-sm-6">
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">Owner</h3>
+            </div>
+            <div class="panel-body">
+                  <div class="form-group">
+                    <label>Primary Client</label>
+                    <input class="form-control" ng-model="project.owner.primary_client">
+                  </div>
+                  <div class="form-group">
+                    <label>Product Owner</label>
+                    <input class="form-control" ng-model="project.owner.product_owner">
+                  </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Classification and Development -->
+      <div class="row">
+        <!-- Classification -->
+        <div class="col-sm-6">
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">Classification</h3>
+            </div>
+            <div class="panel-body">
+              <div class="form-group">
+                <label>Initiative</label>
+                <input class="form-control" ng-model="project.initiative">
+              </div>
+              <div class="form-group">
+                <label>Project</label>
+                <input class="form-control" ng-model="project.project">
+              </div>
+              <div class="form-group">
+                <label>Portfolio</label>
+                <input class="form-control" ng-model="project.portfolio">
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Development -->
+        <div class="col-sm-6">
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">Development</h3>
+            </div>
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="form-group">
+                    <label>start Date</label>
+                    <input class="form-control" ng-model="project.dev.start_date">
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-group">
+                    <label>End Date</label>
+                    <input class="form-control" ng-model="project.dev.end_date">
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Primary Contact</label>
+                <input class="form-control" ng-model="project.dev.contacts[0]">
+              </div>
+              <div class="form-group">
+                <label>Secondary Contact</label>
+                <input class="form-control" ng-model="project.dev.contacts[1]">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Buttons -->
+      <div class="row pull-right">
+        <a href="#/projects" class="btn btn-default">Cancel</a>
+        <a class="btn btn-success" ng-click="actionCreate()" ng-if="project._id == undefined">Create</a>
+        <a class="btn btn-primary" ng-click="actionSave()" ng-if="project._id != undefined">Save</a>
+        <a class="btn btn-danger" ng-click="actionDelete()" ng-if="project._id != undefined">Delete</a>
+      </div>
+    </form>
+  </div>
+</div>

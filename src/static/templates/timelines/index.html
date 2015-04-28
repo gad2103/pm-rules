@@ -1,0 +1,15 @@
+<p>Timeline</p>
+<p>{{data}}</p>
+<table class="table table-bordered">
+  <tbody ng-repeat="top in data">
+    <tr ng-repeat="middle in top.nodes">
+      <td rowspan="{{top.nodes.length}}" ng-if="$first">{{top.title}}</td>
+      <td rowspan="{{middle.nodes.length}}}">{{middle.title}}</td>
+      <td>
+        <ul ng-repeat="sb in middle.nodes">
+          <li>{{sb.title}} [{{sb.start}} - {{sb.end}}]</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
